@@ -1,7 +1,7 @@
 {
   "name": "Gizmo",
   "displayName": "Gizmo",
-  "description": "GizmoExtension",
+  "description": "Gizmo",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.92.0"
@@ -12,6 +12,18 @@
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
+    "configuration":[
+      {
+        "title": "GizmoConfig",
+        "properties": {
+            "gizmoConfig.compDllPath": {
+                "type": "string",
+                "default": "C:\\Programming\\GizmoExtension\\Gizmo\\src\\assets\\libcompiler.dll",
+                "description": "Path to the DLL containing the compile method"
+            }
+        }
+      }
+    ],
     "commands": [
       {
         "command": "Gizmo.helloWorld",

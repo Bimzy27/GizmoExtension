@@ -26,8 +26,8 @@
     ],
     "commands": [
       {
-        "command": "Gizmo.helloWorld",
-        "title": "Hello World"
+        "command": "Gizmo.Compile",
+        "title": "Compile Gizmo Project"
       }
     ]
   },

@@ -26,8 +26,9 @@ export function activate(context: vscode.ExtensionContext) {
 		// Display a message box to the user
 		vscode.window.showInformationMessage('Hello World from Gizmo!');
 
-
-		const gizmoProjectFilePath = "C:/Programming/GizmoTestProject/project.gizmo"; //TODO Replace with the actual code to compile
+        const workspaceRoot = vscode.workspace.workspaceFolders?.at(0)?.uri.fsPath;
+		const gizmoProjectFilePath = workspaceRoot + "\\project.gizmo";
+        vscode.window.showInformationMessage(gizmoProjectFilePath);
         const childProcess = cp.spawn(executablePath, [gizmoProjectFilePath]);
 
         childProcess.stdout.on('data', (data) => {

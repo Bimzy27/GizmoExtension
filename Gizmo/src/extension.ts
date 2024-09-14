@@ -4,7 +4,7 @@ import * as path from 'path';
 
 export function activate(context: vscode.ExtensionContext) 
 {
-	const executablePath = path.join(__dirname, '../Debug/net8.0/Gizmo.exe');
+	const executablePath = path.join(__dirname, '../gizmoCompilerDebug/net8.0/Gizmo.exe');
 
 	const disposable = vscode.commands.registerCommand('Gizmo.Compile', () => {
 

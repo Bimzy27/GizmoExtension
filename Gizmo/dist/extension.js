@@ -35,7 +35,7 @@ const vscode = __importStar(__webpack_require__(1));
 const cp = __importStar(__webpack_require__(2));
 const path = __importStar(__webpack_require__(3));
 function activate(context) {
-    const executablePath = path.join(__dirname, '../Debug/net8.0/Gizmo.exe');
+    const executablePath = path.join(__dirname, '../gizmoCompilerDebug/net8.0/Gizmo.exe');
     const disposable = vscode.commands.registerCommand('Gizmo.Compile', () => {
         const workspaceRoot = vscode.workspace.workspaceFolders?.at(0)?.uri.fsPath;
         const gizmoProjectFilePath = workspaceRoot + "\\project.gizmo";
